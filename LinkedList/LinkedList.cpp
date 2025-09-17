@@ -38,6 +38,18 @@ void LinkedList::Display() const {
     std::cout << " ]" << std::endl;
 }
 
+// Search if an element is in the list
+int LinkedList::Search(int Element)const {
+    Node* Temp = Head;
+    int Pos = 0;
+    while (Temp != nullptr) {
+        if (Temp->Data == Element) return Pos;
+        Temp = Temp->NextPtr;
+        Pos++;
+    }
+    return -1;    // Return -1 if the elemnet not found
+}
+
 // Reverse the linked list (Iterative Method)
 void LinkedList::ReverseIterative() {
     Node* Prev = nullptr;
