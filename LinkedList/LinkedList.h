@@ -39,4 +39,5 @@ public:
     void Display() const;
     int GetLength() const;
     void ReverseIterative();
+    int Search(int Element)const;
 };
